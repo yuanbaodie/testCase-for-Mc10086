@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+ <!-- 点击“服务”，进入到服务模块，判断是否存在Text  -->
+ <test id="1" type="testAssertByText" typeValue="服务" next="2" errnext="-1" errlog="1"/> 
+ <test id="2" type="testClickByText" typeValue="服务" next="3" errnext="-1" errlog="1"/>
+ <test id="3" type="sleep" typeValue="4000" next="4" errnext="-1" errlog="1"/>
+ 
+ <!--新装APP出现提示，点击取消图标展示-->
+ <test id="4" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="5" errnext="-1" errlog="1"/> 
+ <test id="5" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="6" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“服务”，判断是否存在Text，判断是否存在Text -->
+ <test id="6" type="testAssertByText" typeValue="服务" next="7" errnext="-1" errlog="1"/> 
+ <test id="7" type="testClickByText" typeValue="服务" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="sleep" typeValue="4000" next="9" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000013.点击“WLAN热点”按钮，判断是否存在Text -->
+ <test id="9" type="testAssertByText" typeValue="WLAN热点" next="10" errnext="-1" errlog="1"/>
+ <test id="10" type="testClickByText" typeValue="WLAN热点" next="11" errnext="-1" errlog="1"/>
+ <test id="11" type="sleep" typeValue="6000" next="12" errnext="-1" errlog="1"/>
+ <test id="12" type="testScreenShot" typeValue="001-服务-WLAN热点-进入WLAN热点页面" next="13" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击左上角“选择地区”按钮，判断是否存在ResourceId，没有则跳转到ID15 -->
+ <test id="13" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/shall_citysearch_txt" next="14" errnext="15" errlog="0"/>
+ <test id="14" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/shall_citysearch_txt" next="18" errnext="-1" errlog="1"/>
+ <test id="18" type="sleep" typeValue="1000" next="19" errnext="-1" errlog="1"/>
+  
+ <!-- 点击“清空历史记录”按钮，判断是否存在Text-->
+ <test id="15" type="testAssertByText" typeValue="清空搜索历史" next="16" errnext="-1" errlog="1"/>
+ <test id="16" type="testClickByText" typeValue="清空搜索历史" next="17" errnext="-1" errlog="1"/>
+ <test id="17" type="sleep" typeValue="1000" next="13" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“输入框”输入深圳，判断是否存在ResourceId，没有则跳转到ID24 -->
+ <test id="19" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt" next="20" errnext="24" errlog="0"/>
+ <test id="20" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt##深圳" next="22" errnext="-1" errlog="1"/>
+ <!-- 选择“深圳”点击，判断是否存在ResourceId，没有则跳转到ID24 -->
+ <test id="22" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/name" next="23" errnext="24" errlog="0"/>
+ <test id="23" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/name" next="26" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000014.点击“当前位置:深圳”，判断是否存在Text- -->
+ <test id="24" type="testAssertByText" typeValue="当前位置:深圳" next="25" errnext="33" errlog="0"/>
+ <test id="25" type="testClickByText" typeValue="当前位置:深圳" next="22" errnext="-1" errlog="1"/>
+ <test id="26" type="sleep" typeValue="5000" next="27" errnext="-1" errlog="1"/>
+ <test id="27" type="testScreenShot" typeValue="002-服务-WLAN热点-定位地点：深圳" next="28" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“赛格群星” ，判断是否存在Text-->
+ <test id="28" type="testAssertByText" typeValue="赛格群星" next="29" errnext="30" errlog="0"/>
+ <test id="29" type="testClickByText" typeValue="赛格群星" next="45" errnext="-1" errlog="1"/>
+
+ <!-- 点击“赛格群星”，判断是否存在Text -->
+ <test id="30" type="testAssertByText" typeValue="地址:福田区华强北路赛格群星广场" next="31" errnext="33" errlog="0"/>
+ <test id="31" type="testClickByText" typeValue="地址:福田区华强北路赛格群星广场" next="32" errnext="-1" errlog="1"/>
+ <test id="32" type="sleep" typeValue="1000" next="45" errnext="-1" errlog="1"/>
+ 
+ <!-- 网络异常：返回到上一层，判断是否存在ResourceId -->
+ <test id="33" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="34" errnext="-1" errlog="1"/>
+ <test id="34" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="35" errnext="-1" errlog="1"/>
+ <test id="35" type="sleep" typeValue="1000" next="033" errnext="-1" errlog="1"/>
+ 
+ <!-- 异常网络，返回到上一层 -->
+ <test id="033" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="034" errnext="-1" errlog="1"/>
+ <test id="034" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="36" errnext="-1" errlog="1"/>
+ <test id="36" type="testAssertByText" typeValue="WLAN热点" next="37" errnext="-1" errlog="1"/>
+ <test id="37" type="testClickByText" typeValue="WLAN热点" next="38" errnext="-1" errlog="1"/>
+ <test id="38" type="sleep" typeValue="6000" next="39" errnext="-1" errlog="1"/> 
+ 
+ <!-- 点击“清空历史记录”按钮 -->
+ <test id="39" type="testAssertByText" typeValue="清空搜索历史" next="40" errnext="41" errlog="0"/>
+ <test id="40" type="testClickByText" typeValue="清空搜索历史" next="41" errnext="-1" errlog="1"/>
+ <test id="41" type="sleep" typeValue="1000" next="42" errnext="-1" errlog="1"/>
+ <test id="42" type="testAssertByText" typeValue="计生大楼" next="43" errnext="-1" errlog="1"/>
+ <test id="43" type="testClickByText" typeValue="计生大楼" next="44" errnext="-1" errlog="1"/>
+ <test id="44" type="sleep" typeValue="1000" next="044" errnext="-1" errlog="1"/>
+ <test id="044" type="testScreenShot" typeValue="003-服务-WLAN热点-网络异常" next="45" errnext="-1" errlog="1"/>
+ <!-- 点击右上角的“收藏”按钮，判断是否存在ResourceId，没有则跳转到ID47 -->
+ <test id="45" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_collection_btn" next="46" errnext="47" errlog="0"/>
+ <test id="46" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_collection_btn" next="49" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击右上角的“收藏”按钮，判断是否存在ResourceId -->
+ <test id="47" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_collection_btn" next="48" errnext="-1" errlog="1"/>
+ <test id="48" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_rightbtn_rel" next="49" errnext="-1" errlog="1"/>
+ <test id="49" type="sleep" typeValue="2000" next="50" errnext="-1" errlog="1"/>
+ <test id="50" type="testScreenShot" typeValue="004-服务-WLAN热点-收藏WLAN热点成功" next="51" errnext="-1" errlog="1"/>
+
+ <!-- 点击“查看地图”按钮，判断是否存在ResourceId，没有则跳转到ID53 -->
+ <test id="51" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_detail_to_map" next="52" errnext="53" errlog="0"/>
+ <test id="52" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_detail_to_map" next="55" errnext="-1" errlog="1"/>
+
+ <!-- 点击“查看地图”按钮，判断是否存在Text -->
+ <test id="53" type="testAssertByText" typeValue="查看地图：" next="54" errnext="-1" errlog="1"/>
+ <test id="54" type="testClickByText" typeValue="查看地图：" next="55" errnext="-1" errlog="1"/>
+ <test id="55" type="sleep" typeValue="3000" next="56" errnext="-1" errlog="1"/>
+ <test id="56" type="testScreenShot" typeValue="005-服务-WLAN热点-进入到地图模式" next="57" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“汽车线路”，判断是否存在ResourceId，没有则跳转到ID60  -->
+ <test id="57" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_map_driv" next="58" errnext="60" errlog="0"/>
+ <test id="58" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_map_driv" next="59" errnext="-1" errlog="1"/>
+ <test id="59" type="sleep" typeValue="5000" next="60" errnext="-1" errlog="1"/>
+  
+ <!-- TS0000016.点击“走路线路”，判断是否存在ResourceId，没有则跳转到ID64 -->
+ <test id="60" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_map_walk" next="61" errnext="64" errlog="0"/>
+ <test id="61" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_map_walk" next="62" errnext="-1" errlog="1"/>
+ <test id="62" type="sleep" typeValue="5000" next="63" errnext="-1" errlog="1"/>
+ <test id="63" type="testScreenShot" typeValue="006-服务-WLAN热点-切换到人行模式" next="64" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“我的收藏”按钮，判断是否存在ResourceId，没有则跳转到ID68 -->
+ <test id="64" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_radio_btn2" next="65" errnext="68" errlog="0"/>
+ <test id="65" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/wlan_radio_btn2" next="70" errnext="-1" errlog="1"/>
+
+ <!-- 点击“我的收藏”按钮，判断是否存在ClassIndex  -->
+ <test id="68" type="testAssertByClassIndex" typeValue="android.widget.RadioButton##2" next="69" errnext="-1" errlog="1"/>
+ <test id="69" type="testClickByClassIndex" typeValue="android.widget.RadioButton##2" next="70" errnext="-1" errlog="1"/>
+  
+ <test id="70" type="sleep" typeValue="4000" next="71" errnext="-1" errlog="1"/>
+ <test id="71" type="testScreenShot" typeValue="007-服务-WLAN热点-进入到我的收藏" next="72" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“赛格群星” ，进入详情列表，判断是否存在ResourceId，没有则跳转到ID74 -->
+ <test id="72" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_addr_txt" next="73" errnext="74" errlog="0"/>
+ <test id="73" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_addr_txt" next="76" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“赛格群星” ，进入详情列表，判断是否存在Text -->
+ <test id="74" type="testAssertByText" typeValue="地址:福田区华强北路赛格群星广场" next="75" errnext="-1" errlog="1"/>
+ <test id="75" type="testClickByText" typeValue="地址:福田区华强北路赛格群星广场" next="76" errnext="-1" errlog="1"/>
+ <test id="76" type="sleep" typeValue="3000" next="77" errnext="-1" errlog="1"/>
+   
+ <!--TS0000017. 点击右上角“收藏按钮”取消收藏 ，进入详情列表，判断是否存在ResourceId，没有则跳转到ID81 -->
+ <test id="77" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_collection_btn" next="78" errnext="81" errlog="0"/>
+ <test id="78" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_collection_btn" next="79" errnext="-1" errlog="1"/>
+ <test id="79" type="sleep" typeValue="2000" next="80" errnext="-1" errlog="1"/>
+ <test id="80" type="testScreenShot" typeValue="008-服务-WLAN热点-取消收藏成功" next="81" errnext="-1" errlog="1"/>
+
+ <!-- 返回到上一层 ，判断是否存在ResourceId，没有则跳转到ID83-->
+ <test id="81" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="82" errnext="83" errlog="0"/>
+ <test id="82" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="85" errnext="74" errlog="1"/>
+ 
+ <!-- 返回到上一层 -->
+ <test id="83" type="testDeviceControl" typeValue="pressback" next="84" errnext="84" errlog="0"/>
+ <test id="85" type="sleep" typeValue="1000" next="86" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层 -->
+ <test id="86" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="87" errnext="-1" errlog="1"/>
+ <test id="87" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+ </root>

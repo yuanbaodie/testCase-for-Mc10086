@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="01" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+ <test id="01" type="testAssertByText" typeValue="我的" next="02" errnext="-1" errlog="1"/>
+ <test id="02" type="testClickByText" typeValue="我的" next="03" errnext="-1" errlog="1"/>
+ 
+ <!--判断是否已登录，如未登录则点击登录按钮-->
+ <test id="03" type="testAssertByText" typeValue="登录" next="04" errnext="1" errlog="0"/>
+ <test id="04" type="testClickByText" typeValue="登录" next="05" errnext="-1" errlog="1"/>
+ 
+ <!--输入本机的手机号码-->
+ <test id="05" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt" next="06" errnext="-1" errlog="1"/>
+ <test id="06" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt##13554720631" next="07" errnext="-1" errlog="1"/>
+ 
+ <!--点击获取验证码-->
+ <test id="07" type="testAssertByText" typeValue="点击获取" next="08" errnext="-1" errlog="1"/>
+ <test id="08" type="testClickByText" typeValue="点击获取" next="09" errnext="-1" errlog="1"/>
+ <test id="09" type="sleep" typeValue="50000" next="010" errnext="-1" errlog="1"/>
+ 
+ <!--判断登录按钮是否存在-->
+ <test id="010" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="011" errnext="-1" errlog="1"/>
+ <test id="011" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="012" errnext="-1" errlog="1"/>
+ <test id="012" type="sleep" typeValue="8000" next="013" errnext="-1" errlog="1"/>
+ <test id="013" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="014" errnext="1" errlog="0"/>
+ <test id="014" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="1" errnext="-1" errlog="1"/>
+
+ <!-- 点击服务 -->
+ <test id="1" type="testAssertByText" typeValue="服务" next="2" errnext="-1" errlog="1"/>
+ <test id="2" type="testClickByText" typeValue="服务" next="301" errnext="-1" errlog="1"/>
+ 
+ <!-- 二次点击服务（首次安装APP会有提示页面，通过点击服务关闭该提示页面） -->
+ <test id="301" type="testAssertByText" typeValue="服务" next="302" errnext="-1" errlog="1"/>
+ <test id="302" type="testClickByText" typeValue="服务" next="303" errnext="-1" errlog="1"/>
+ <test id="303" type="sleep" typeValue="2000" next="4" errnext="-1" errlog="1"/>
+ 
+ <!-- 向下滑动屏幕 -->
+ <test id="4" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/drag_reorder_scrl" next="5" errnext="-1" errlog="1"/>
+ <test id="5" type="testVertiFlingByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/drag_reorder_scrl##flingtoend" next="6" errnext="-1" errlog="1"/>
+ 
+ <!-- TS000001 提交反馈意见-->
+ <!--点击意见反馈-->
+ <test id="6" type="testAssertByText" typeValue="意见反馈" next="7" errnext="-1" errlog="1"/>
+ <test id="7" type="testClickByText" typeValue="意见反馈" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="testScreenShot" typeValue="001-服务-意见反馈" next="9" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击产品评价星级 -->
+ <test id="9" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_rating" next="10" errnext="-1" errlog="1"/>
+ <test id="10" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_rating" next="11" errnext="-1" errlog="1"/>
+ 
+ <!-- 在输入框中输入反馈内容 -->
+ <test id="11" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_content" next="12" errnext="-1" errlog="1"/>
+ <test id="12" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_content##123456789" next="13" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击右上角“反馈历史”图标 -->
+ <test id="13" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="14" errnext="-1" errlog="1"/>
+ <test id="14" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="15" errnext="-1" errlog="1"/>
+ <test id="15" type="testScreenShot" typeValue="002-服务-意见反馈-反馈历史-1" next="16" errnext="-1" errlog="1"/> 
+
+ <!-- 点击返回-->
+ <test id="16" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="17" errnext="-1" errlog="1"/>
+ <test id="17" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="18" errnext="-1" errlog="1"/>
+
+ <!-- 点击上传图片按钮 -->
+ <test id="18" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_imgbtn" next="19" errnext="-1"  errlog="1"/>
+ <test id="19" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_imgbtn" next="20" errnext="-1"  errlog="1"/>
+
+ <!-- 点击返回键 -->
+ <test id="20" type="testDeviceControl" typeValue="pressback" next="21" errnext="21"  errlog="0"/>
+
+ <!-- 点击确定 -->
+ <test id="21" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_subbtn" next="22" errnext="-1" errlog="1"/>
+ <test id="22" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/service_feedback_subbtn" next="23" errnext="-1" errlog="1"/>
+ <test id="23" type="testScreenShot" typeValue="003-服务-意见反馈-反馈信息" next="24" errnext="-1" errlog="1"/> 
+
+ <!--点击确定-->
+ <test id="24" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="25" errnext="-1" errlog="1"/>
+ <test id="25" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="26" errnext="-1" errlog="1"/>
+ 
+ 
+ <!-- TS000002-验证意见反馈历史页面显示是否正常-->
+ <test id="26" type="testAssertByText" typeValue="意见反馈" next="27" errnext="-1" errlog="1"/>
+ <test id="27" type="testClickByText" typeValue="意见反馈" next="28" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击右上角图标 -->
+ <test id="28" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="29" errnext="-1" errlog="1"/>
+ <test id="29" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="30" errnext="-1" errlog="1"/>
+ <test id="30" type="testScreenShot" typeValue="004-服务-意见反馈-反馈历史-2" next="31" errnext="-1" errlog="1"/> 
+ 
+ <!-- 点击返回两次 -->
+ <test id="31" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="32" errnext="-1" errlog="1"/>
+ <test id="32" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="33" errnext="-1" errlog="1"/>
+ 
+ <test id="33" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="34" errnext="-1" errlog="1"/>
+ <test id="34" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+ 
+ </root>

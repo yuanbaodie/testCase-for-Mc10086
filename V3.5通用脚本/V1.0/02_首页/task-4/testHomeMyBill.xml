@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+  <!-- 判断【首页】按钮是否有id -->
+  <test id="1" type="testAssertByText" typeValue="首页" next="2" errnext="-1" errlog="1" />
+  <test id="2" type="testClickByText" typeValue="首页" next="201" errnext="-1" errlog="1" />
+  
+  <!-- 判断【三点】按钮，是否有id -->
+  <test id="201" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="202" errnext="-1"  errlog="1"/> 
+  <!-- 点击【三点】按钮 -->
+  <test id="202" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="203" errnext="-1"  errlog="1"/> 
+  
+  
+  <!-- 判断是【点击按钮】是否存在，不存在则登录成功直接进入224，失败继续登录 -->
+  <test id="203" type="testAssertByText" typeValue="点击登录" next="204" errnext="228" errlog="0" />
+  <!-- 判断是否登录成功 -->
+  <test id="204" type="testClickByText" typeValue="点击登录" next="205" errnext="-1" errlog="1" />
+  
+  
+  <!-- 判断【删除号码是否存在】按钮，是否有id -->
+  <test id="205" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/phoneNo_clear_img" next="206" errnext="207"  errlog="0"/> 
+  <!-- 点击【删除号码是否存在】按钮 -->
+  <test id="206" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/phoneNo_clear_img" next="207" errnext="-1"  errlog="1"/> 
+  
+  
+  
+  
+  <!-- 判断号码输入框是否存在id  -->
+  <test id="207" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt" next="208" errnext="-1" errlog="1"/> 
+  <!-- 号码文本框输入号码 -->
+  <test id="208" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt##13544186203" next="209" errnext="-1" errlog="1"/> 
+ 
+  <!--判断点击获取验证码是否存在  -->
+  <test id="209" type="testAssertByText" typeValue="点击获取" next="210" errnext="-1" errlog="1" />
+  <test id="210" type="testClickByText" typeValue="点击获取" next="211" errnext="-1" errlog="1" />
+  <test id="211" type="sleep" typeValue="20000" next="212" errnext="-1" errlog="1"/>
+ 
+  <!-- 判断点击登录按钮是否成功 -->
+  <test id="212" type="testAssertByText" typeValue="登 录" next="213" errnext="-1" errlog="1" />
+  <test id="213" type="testClickByText" typeValue="登 录" next="214" errnext="-1" errlog="1" />
+  <test id="214" type="sleep" typeValue="4000" next="215" errnext="-1" errlog="1"/>
+ 
+ 
+   <!-- 判断铃铛按钮是否存在 -->
+   <test id="215" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="216" errnext="217"  errlog="0"/> 
+   <test id="216" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="217" errnext="-1"  errlog="1"/>
+ 
+ 
+  <!-- 判断【三点】按钮，是否有id，没有则判断网络异常登录不成功进入219步 -->
+  <test id="217" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="218" errnext="219"  errlog="0"/> 
+  <!-- 点击【三点】按钮 -->
+  <test id="218" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="227" errnext="-1"  errlog="1"/> 
+  
+  
+  
+
+  
+  <!-- 弹出异常网络问题 -->
+  <test id="219" type="testAssertByText" typeValue="知道了" next="220" errnext="-1" errlog="1" />
+  <test id="220" type="testClickByText" typeValue="知道了" next="221" errnext="-1" errlog="1" />
+  <!-- 判断点击登录按钮是否成功 -->
+  <test id="221" type="testAssertByText" typeValue="登 录" next="222" errnext="-1" errlog="1" />
+  <test id="222" type="testClickByText" typeValue="登 录" next="223" errnext="-1" errlog="1" />
+  
+  
+   <!-- 判断铃铛按钮是否存在 -->
+   <test id="223" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="224" errnext="225"  errlog="0"/> 
+   <test id="224" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="225" errnext="-1"  errlog="1"/>
+  
+  
+  <!-- 判断【三点】按钮，是否有id -->
+  <test id="225" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="226" errnext="-1"  errlog="1"/> 
+  <!-- 点击【三点】按钮 -->
+  <test id="226" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="227" errnext="-1"  errlog="1"/> 
+  
+
+  
+  
+  
+  <!-- 判断再次登录是否成功，登录成功则直接进入下一步，失败直接退出 -->
+  <test id="227" type="testAssertByText" typeValue="注销" next="228" errnext="-1" errlog="1" /> 
+
+  <!-- 判断【三点】按钮，是否有id -->
+  <test id="228" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="229" errnext="-1"  errlog="1"/> 
+  <test id="229" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="230" errnext="-1"  errlog="1"/> 
+  <test id="230" type="sleep" typeValue="4000" next="3" errnext="-1" errlog="1"/>
+  
+  
+  
+ 
+  
+  
+  <!-- TS0000001 -->
+  <!-- 验证【流量管家】是否有id -->
+  <test id="3" type="testAssertByText" typeValue="我的账单" next="4" errnext="-1" errlog="1" />
+  <test id="4" type="testClickByText" typeValue="我的账单" next="5" errnext="-1" errlog="1" />
+  <test id="5" type="sleep" typeValue="4000" next="6" errnext="-1" errlog="1"/>
+  <test id="6" type="testScreenShot" typeValue="001-首页-我的账单" next="7" errnext="-1" errlog="1"/>
+  
+
+   <!-- 判断点击7月份账单，没有7月账时跳转到 8月 -->
+  <test id="7" type="testAssertByText" typeValue="7月" next="8" errnext="11" errlog="1" /> 
+  <test id="8" type="testClickByText" typeValue="7月" next="9" errnext="-1" errlog="1" /> 
+  <test id="9" type="sleep" typeValue="3000" next="10" errnext="-1" errlog="1"/> 
+  <!-- 判断点击8月 -->
+  <test id="10" type="testAssertByText" typeValue="8月" next="11" errnext="-1" errlog="1" /> 
+  <test id="11" type="testClickByText" typeValue="8月" next="12" errnext="-1" errlog="1" /> 
+  <test id="12" type="sleep" typeValue="3000" next="13" errnext="-1" errlog="1"/> 
+  
+  
+   <!-- 判断点击9月 -->
+  <test id="13" type="testAssertByText" typeValue="9月" next="14" errnext="-1" errlog="1" /> 
+  <test id="14" type="testClickByText" typeValue="9月" next="15" errnext="-1" errlog="1" /> 
+  <test id="15" type="sleep" typeValue="3000" next="16" errnext="-1" errlog="1"/> 
+  <test id="16" type="testScreenShot" typeValue="002-首页-我的账单9月" next="17" errnext="-1" errlog="1"/>
+  
+  <!-- 判断点击10月 -->
+  <test id="17" type="testAssertByText" typeValue="10月" next="18" errnext="-1" errlog="1" /> 
+  <test id="18" type="testClickByText" typeValue="10月" next="19" errnext="-1" errlog="1" /> 
+  <test id="19" type="testScreenShot" typeValue="003-首页-我的账单10月" next="20" errnext="-1" errlog="1"/>
+  <test id="20" type="sleep" typeValue="3000" next="21" errnext="-1" errlog="1"/> 
+ 
+ 
+ 
+  <!-- TS0000002 -->
+  <!-- 判断点击11月 -->
+  <test id="21" type="testAssertByText" typeValue="11月" next="22" errnext="-1" errlog="1" /> 
+  <test id="22" type="testClickByText" typeValue="11月" next="23" errnext="-1" errlog="1" /> 
+  <test id="23" type="sleep" typeValue="3000" next="24" errnext="-1" errlog="1"/> 
+  
+  <!-- 判断点击近六个月消费情况，没有text调到26步，判断id是否存在 -->
+  <test id="24" type="testAssertByText" typeValue="近6个月消费图" next="25" errnext="26" errlog="0" /> 
+  <test id="25" type="testClickByText" typeValue="近6个月消费图" next="28" errnext="-1" errlog="1" /> 
+  
+  <!-- 判断点击近六个月消费情况 -->
+  <test id="26" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/chart_enable" next="27" errnext="-1" errlog="1"/>
+  <test id="27" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/chart_enable" next="28" errnext="-1" errlog="1"/>
+  <!-- 关闭近六个月消费情况 -->
+  <test id="28" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/chart_enable" next="29" errnext="-1" errlog="1" /> 
+  <test id="29" type="testScreenShot" typeValue="004-首页-我的账单2" next="30" errnext="-1" errlog="1"/>
+  
+  
+  
+  <!-- 判断点击祥单查询 -->
+  <test id="30" type="testAssertByText" typeValue="详单查询" next="31" errnext="-1" errlog="1" /> 
+  <test id="31" type="testClickByText" typeValue="详单查询" next="32" errnext="-1" errlog="1" /> 
+  <test id="32" type="sleep" typeValue="3000" next="33" errnext="-1" errlog="1"/>
+  <test id="33" type="testScreenShot" typeValue="005-首页-我的账单-详单查询" next="34" errnext="-1" errlog="1"/>
+
+  <!-- 判断退出是否存在-->
+  <test id="34" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="35" errnext="-1" errlog="1"/>
+  <test id="35" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="36" errnext="-1" errlog="1"/>
+  
+  
+  <!-- TS0000003 -->
+  <!-- 判断点击12月 -->
+  <test id="36" type="testAssertByText" typeValue="12月" next="37" errnext="-1" errlog="1" /> 
+  <test id="37" type="testClickByText" typeValue="12月" next="38" errnext="-1" errlog="1" />
+  <test id="38" type="testScreenShot" typeValue="006-首页-我的账单2" next="39" errnext="-1" errlog="1"/>
+  
+  <!-- 判断点击去充值按钮 ，，去充值仅显示在最近一个月，没有则调到1月-->
+  <test id="39" type="testAssertByText" typeValue="去充值" next="40" errnext="43" errlog="0" /> 
+  <test id="40" type="testClickByText" typeValue="去充值" next="41" errnext="-1" errlog="1" />
+  <test id="41" type="sleep" typeValue="3000" next="42" errnext="-1" errlog="1"/>
+  <test id="42" type="testScreenShot" typeValue="007-首页-我的账单-去充值2" next="49" errnext="-1" errlog="1"/>
+  
+  <!-- TS0000003 -->
+  <!-- 判断点击1月 -->
+  <test id="43" type="testAssertByText" typeValue="1月" next="44" errnext="-1" errlog="1" /> 
+  <test id="44" type="testClickByText" typeValue="1月" next="45" errnext="-1" errlog="1" />
+  <test id="45" type="testScreenShot" typeValue="004-首页-我的账单-1月详单" next="46" errnext="-1" errlog="1"/>
+  <!-- 判断点击去充值按钮 -->
+  <test id="46" type="testAssertByText" typeValue="去充值" next="47" errnext="-1" errlog="1" /> 
+  <test id="47" type="testClickByText" typeValue="去充值" next="48" errnext="-1" errlog="1" />
+  <test id="48" type="sleep" typeValue="3000" next="49" errnext="-1" errlog="1"/>
+  
+   <!-- 判断退出是否存在-->
+  <test id="49" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="50" errnext="-1" errlog="1"/>
+  <test id="50" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="51" errnext="-1" errlog="1"/>
+  
+  
+  <!-- TS0000004 -->
+   <!-- 判断点击想单查询 -->
+  <test id="51" type="testAssertByText" typeValue="详单查询" next="52" errnext="-1" errlog="1" /> 
+  <test id="52" type="testClickByText" typeValue="详单查询" next="53" errnext="-1" errlog="1" /> 
+  <test id="53" type="sleep" typeValue="3000" next="54" errnext="-1" errlog="1"/>
+
+  <!-- 判断退出是否存在-->
+  <test id="54" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="55" errnext="-1" errlog="1"/>
+  <test id="55" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="56" errnext="-1" errlog="1"/>
+  
+  
+   <!-- 判断退出首页是否存在-->
+  <test id="56" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="57" errnext="-1" errlog="1"/>
+  <test id="57" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+
+ </root> 

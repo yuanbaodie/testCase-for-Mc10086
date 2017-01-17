@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+ <test id="1" type="testAssertByText" typeValue="我的" next="2" errnext="-1" errlog="1"/>
+ <test id="2" type="testClickByText" typeValue="我的" next="3" errnext="-1" errlog="1"/>
+ 
+ <!--判断是否已登录，如未登录则点击登录按钮-->
+ <test id="3" type="testAssertByText" typeValue="登录" next="4" errnext="13" errlog="0"/>
+ <test id="4" type="testClickByText" typeValue="登录" next="5" errnext="-1" errlog="1"/>
+ 
+ <test id="5" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt" next="6" errnext="-1" errlog="1"/>
+ <!--输入本机的手机号码-->
+ <test id="6" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt##13927446274" next="7" errnext="-1" errlog="1"/>
+ <!--点击获取验证码-->
+ <test id="7" type="testAssertByText" typeValue="点击获取" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="testClickByText" typeValue="点击获取" next="9" errnext="-1" errlog="1"/>
+ <test id="9" type="sleep" typeValue="50000" next="10" errnext="-1" errlog="1"/>
+ <!--判断登录按钮是否存在-->
+ <test id="10" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="11" errnext="-1" errlog="1"/>
+ <test id="11" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="12" errnext="-1" errlog="1"/>
+ <test id="12" type="sleep" typeValue="8000" next="96" errnext="-1" errlog="1"/>
+ <test id="96" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="97" errnext="13" errlog="0"/>
+ <test id="97" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="13" errnext="-1" errlog="1"/>
+ 
+ <test id="13" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/img_login" next="14" errnext="-1" errlog="1"/>
+ <!--点击我的页面中的左上方的“人头”-->
+ <test id="14" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/img_login" next="15" errnext="-1" errlog="1"/> 
+ <test id="15" type="sleep" typeValue="5000" next="16" errnext="-1" errlog="1"/>
+ <test id="16" type="testScreenShot" typeValue="001-我的-个人信息" next="17" errnext="-1" errlog="1"/> 
+ 
+ <test id="17" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="18" errnext="22" errlog="1"/> 
+ <!--点击个人信息页面中的右上方的分享-->
+ <test id="18" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="19" errnext="-1" errlog="1"/> 
+ <test id="19" type="testAssertByText" typeValue="新浪微博" next="20" errnext="-1" errlog="0"/>
+ <!--点击分享到新浪微博-->
+ <test id="20" type="testClickByText" typeValue="新浪微博" next="21" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="21" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="22" errnext="-1" errlog="1"/>
+ 
+ <test id="22" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/identity" next="23" errnext="26" errlog="1"/> 
+ <!--点击个人信息页面中的“二维码”-->
+ <test id="23" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/identity" next="24" errnext="-1" errlog="1"/> 
+ 
+ <test id="24" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="25" errnext="-1" errlog="1"/> 
+ <!--点击关闭“二维码”-->
+ <test id="25" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="26" errnext="-1" errlog="1"/> 
+ 
+ 
+ <test id="26" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_dimension_layout" next="27" errnext="30" errlog="1"/> 
+ <!--点击个人信息页面中的“我的权益”-->
+ <test id="27" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_dimension_layout" next="28" errnext="-1" errlog="1"/> 
+ <test id="28" type="testScreenShot" typeValue="002-我的-我的权益" next="29" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="29" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="30" errnext="-1" errlog="1"/> 
+ 
+ <test id="30" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_global_layout" next="31" errnext="34" errlog="1"/> 
+ <!--点击个人信息页面中的“全球通俱乐部”-->
+ <test id="31" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_global_layout" next="94" errnext="-1" errlog="1"/> 
+ <test id="94" type="sleep" typeValue="5000" next="32" errnext="-1" errlog="1"/>
+ <test id="32" type="testScreenShot" typeValue="003-我的-全球通俱乐部" next="33" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="33" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="34" errnext="-1" errlog="1"/> 
+ 
+ <test id="34" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mzone_layout" next="35" errnext="38" errlog="1"/> 
+ <!--点击个人信息页面中的“动感地带俱乐部”-->
+ <test id="35" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mzone_layout" next="95" errnext="-1" errlog="1"/> 
+ <test id="95" type="sleep" typeValue="5000" next="36" errnext="-1" errlog="1"/>
+ <test id="36" type="testScreenShot" typeValue="004-我的-动感地带俱乐部" next="37" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="37" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="38" errnext="-1" errlog="1"/> 
+ 
+ <test id="38" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_starscore_layout" next="39" errnext="47" errlog="1"/>
+ <!--点击个人信息页面中的“星级”-->
+ <test id="39" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_starscore_layout" next="40" errnext="-1" errlog="1"/> 
+ <test id="40" type="sleep" typeValue="5000" next="41" errnext="-1" errlog="1"/>
+ <test id="41" type="testScreenShot" typeValue="005-我的-星级服务介绍" next="42" errnext="-1" errlog="1"/>
+ <!--手指垂直向上滑动-->
+ <test id="42" type="testVertiFling" typeValue="flingtoend" next="43" errnext="-1" errlog="1"/>
+ <test id="43" type="sleep" typeValue="2000" next="44" errnext="-1" errlog="1"/>
+ <test id="44" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="45" errnext="-1" errlog="1"/> 
+ <test id="45" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="46" errnext="-1" errlog="1"/>
+ <test id="46" type="testVertiFling" typeValue="flingtoend" next="47" errnext="47" errlog="1"/>
+ 
+ <test id="47" type="testAssertByText" typeValue="修改" next="48" errnext="-1" errlog="1"/>
+ <test id="48" type="testClickByText" typeValue="修改" next="49" errnext="-1" errlog="1"/>
+ 
+ <test id="49" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete1" next="50" errnext="51" errlog="0"/> 
+ <!--点击联系电话输入框中的“X”-->
+ <test id="50" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete1" next="51" errnext="-1" errlog="1"/> 
+ <test id="51" type="testAssertByText" typeValue="保存" next="52" errnext="-1" errlog="1"/>
+ <!--验证联系电话为空时，点击保存-->
+ <test id="52" type="testClickByText" typeValue="保存" next="53" errnext="-1" errlog="1"/>
+ 
+ <test id="53" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/telephone_text" next="54" errnext="58" errlog="1"/> 
+ <!--在联系电话输入框中输入不符合要求的号码15121431，点击保存-->
+ <test id="54" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/telephone_text##1512143" next="55" errnext="-1" errlog="1"/> 
+ <test id="55" type="testClickByText" typeValue="保存" next="56" errnext="-1" errlog="1"/>
+ <test id="56" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete1" next="57" errnext="-1" errlog="1"/> 
+ <test id="57" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/telephone_text##15121431332" next="58" errnext="-1" errlog="1"/> 
+ 
+ <test id="58" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/email_txt" next="59" errnext="68" errlog="1"/>
+ <!--点击电子邮箱输入框-->
+ <test id="59" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/email_txt" next="60" errnext="-1" errlog="1"/> 
+ <test id="60" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete2" next="61" errnext="62" errlog="0"/> 
+ <!--点击电子邮箱输入框中的“X”-->
+ <test id="61" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete2" next="62" errnext="-1" errlog="1"/> 
+ <!--验证电子邮箱为空时，点击保存-->
+ <test id="62" type="testClickByText" typeValue="保存" next="63" errnext="-1" errlog="1"/>
+ <test id="63" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/email_txt" next="64" errnext="-1" errlog="1"/>
+ <!--在电子邮箱输入框中输入不符要求的邮箱地址，点击保存--> 
+ <test id="64" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/email_txt##123456789" next="65" errnext="-1" errlog="1"/> 
+ <test id="65" type="testClickByText" typeValue="保存" next="66" errnext="-1" errlog="1"/>
+ <test id="66" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete2" next="67" errnext="-1" errlog="1"/>
+ <test id="67" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/email_txt##1234567ss@qq.com" next="68" errnext="-1" errlog="1"/> 
+ 
+ <test id="68" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/zip_text" next="69" errnext="77" errlog="1"/>
+ <!--点击邮政编码的输入框-->
+ <test id="69" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/zip_text" next="70" errnext="-1" errlog="1"/> 
+ <test id="70" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete3" next="71" errnext="72" errlog="0"/> 
+ <!--点击邮政编码输入框中的“X”-->
+ <test id="71" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete3" next="72" errnext="-1" errlog="1"/> 
+ <!--验证电子邮箱为空时，点击保存-->
+ <test id="72" type="testClickByText" typeValue="保存" next="73" errnext="-1" errlog="1"/> 
+ <!--在邮政编码输入框中输入不符要求的邮政编码-->
+ <test id="73" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/zip_text##313" next="74" errnext="-1" errlog="1"/> 
+ <test id="74" type="testClickByText" typeValue="保存" next="75" errnext="-1" errlog="1"/>
+ <test id="75" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete3" next="76" errnext="-1" errlog="1"/>
+ <test id="76" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/zip_text##417100" next="77" errnext="-1" errlog="1"/> 
+ 
+ <test id="77" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/address_text" next="78" errnext="-1" errlog="1"/>
+ <!--点击联系地址的输入框-->
+ <test id="78" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/address_text" next="79" errnext="-1" errlog="1"/> 
+ <test id="79" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete4" next="80" errnext="81" errlog="0"/> 
+ <!--点击联系地址输入框中的“X”-->
+ <test id="80" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete4" next="81" errnext="-1" errlog="1"/> 
+ <!--验证联系地址为空时，点击保存-->
+ <test id="81" type="testClickByText" typeValue="保存" next="82" errnext="-1" errlog="1"/>  
+ <!--在联系地址输入框中输入2个字符的联系地址，此处083为后续添加脚本-->
+ <test id="82" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/address_text##GD" next="83" errnext="-1" errlog="1"/> 
+ <test id="83" type="testClickByText" typeValue="保存" next="084" errnext="-1" errlog="1"/>
+ <test id="084" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/delete4" next="84" errnext="90" errlog="0"/> 
+
+
+ <!--在联系地址输入框中输入符合要求的联系地址-->
+ <test id="85" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/address_text##BaoAnDistrictXiXiangStreet " next="86" errnext="-1" errlog="1"/> 
+ <test id="86" type="testClickByText" typeValue="保存" next="87" errnext="-1" errlog="1"/> 
+ <test id="87" type="sleep" typeValue="3000" next="88" errnext="-1" errlog="1"/>
+  <!--判断页面中是否存在“分享”图标-->
+ <test id="88" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_share_btn" next="89" errnext="90" errlog="0"/>
+ <!-- 点击返回 -->
+ <test id="89" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/> 
+ <test id="90" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="91" errnext="-1" errlog="1"/>
+ <test id="91" type="testAssertByText" typeValue="确定" next="92" errnext="-1" errlog="1"/>
+ <!-- 点击确定，放弃本次修改 -->
+ <test id="92" type="testClickByText" typeValue="确定" next="93" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="93" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+ 
+</root>
