@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+ <!-- 点击“服务”，进入到服务模块，判断是否存在Text  -->
+ <test id="1" type="testAssertByText" typeValue="服务" next="2" errnext="-1" errlog="1"/> 
+ <test id="2" type="testClickByText" typeValue="服务" next="3" errnext="-1" errlog="1"/>
+ <test id="3" type="sleep" typeValue="4000" next="4" errnext="-1" errlog="1"/>
+ 
+ <!--新装APP出现提示，点击取消图标展示-->
+ <test id="4" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="5" errnext="-1" errlog="1"/> 
+ <test id="5" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="6" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“服务”，判断是否存在Text -->
+ <test id="6" type="testAssertByText" typeValue="服务" next="7" errnext="-1" errlog="1"/> 
+ <test id="7" type="testClickByText" typeValue="服务" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="sleep" typeValue="4000" next="9" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000003.点击“附件营业厅”按钮，判断是否存在ResourceId，没有则跳转到ID11 -->
+ <test id="9" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/grid_textview" next="10" errnext="11" errlog="0"/>
+ <test id="10" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/grid_textview" next="13" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“附件营业厅”按钮,判断是否存在Text -->
+ <test id="11" type="testAssertByText" typeValue="附近营业厅" next="12" errnext="-1" errlog="1"/> 
+ <test id="12" type="testClickByText" typeValue="附近营业厅" next="13" errnext="-1" errlog="1"/>
+ <test id="13" type="sleep" typeValue="4000" next="14" errnext="-1" errlog="1"/>
+ <test id="14" type="testScreenShot" typeValue="001-服务-附近营业厅-点击进入附近营业厅" next="15" errnext="-1" errlog="1"/>
+
+ <!-- 点击左上角“选择地区”按钮,判断是否存在ResourceId，没有则跳转到ID26  -->
+ <test id="15" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/shall_citysearch_txt" next="16" errnext="26" errlog="0"/>
+ <test id="16" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/shall_citysearch_txt" next="17" errnext="-1" errlog="1"/>
+ <test id="17" type="sleep" typeValue="1000" next="18" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“输入框”输入深圳,判断是否存在ResourceId，没有则跳转到ID22-->
+ <test id="18" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt" next="19" errnext="22" errlog="0"/>
+ <test id="19" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt##深圳" next="20" errnext="-1" errlog="1"/>
+ 
+ <!-- 选择“深圳”点击,判断是否存在ResourceId，没有则跳转到ID22-->
+ <test id="20" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/name" next="21" errnext="22" errlog="0"/>
+ <test id="21" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/name" next="24" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000004.点击“当前位置:深圳”,判断是否存在Text，没有则跳转到ID31 -->
+ <test id="22" type="testAssertByText" typeValue="当前位置:深圳" next="23" errnext="31" errlog="0"/> 
+ <test id="23" type="testClickByText" typeValue="当前位置:深圳" next="20" errnext="-1" errlog="1"/>
+ 
+ <test id="24" type="sleep" typeValue="5000" next="25" errnext="-1" errlog="1"/>
+ <test id="25" type="testScreenShot" typeValue="002-服务-附近营业厅-选择地区为深圳" next="26" errnext="-1" errlog="1"/>
+
+ <!-- 点击“深圳渠道”,判断是否存在ResourceId，没有则跳转到ID28 -->
+ <test id="26" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/textViewbusiness" next="27" errnext="28" errlog="0"/>
+ <test id="27" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/textViewbusiness" next="30" errnext="-1" errlog="1"/>
+
+ <!-- 点击“深圳渠道”,判断是否存在Text，没有则跳转到ID31 -->
+ <test id="28" type="testAssertByText" typeValue="地址:深圳" next="29" errnext="31" errlog="0"/>
+ <test id="29" type="testClickByText" typeValue="地址:深圳" next="30" errnext="-1" errlog="1"/>
+ <test id="30" type="sleep" typeValue="1000" next="47" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层,判断是否存在ResourceId -->
+ <test id="31" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="32" errnext="-1" errlog="1"/>
+ <test id="32" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="33" errnext="-1" errlog="1"/>
+ <test id="33" type="sleep" typeValue="1000" next="34" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层,判断是否存在ResourceId -->
+ <test id="34" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="35" errnext="-1" errlog="1"/>
+ <test id="35" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="36" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“附件营业厅”按钮,判断是否存在Text -->
+ <test id="36" type="testAssertByText" typeValue="附近营业厅" next="37" errnext="-1" errlog="1"/>
+ <test id="37" type="testClickByText" typeValue="附近营业厅" next="38" errnext="-1" errlog="1"/>
+ <test id="38" type="sleep" typeValue="6000" next="39" errnext="-1" errlog="1"/> 
+ <test id="39" type="testScreenShot" typeValue="003-服务-附近营业厅-点击进入附近营业厅" next="40" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“清空历史记录”按钮,判断是否存在Text-->
+ <test id="40" type="testAssertByText" typeValue="清空搜索历史" next="41" errnext="44" errlog="0"/>
+ <test id="41" type="testClickByText" typeValue="清空搜索历史" next="42" errnext="-1" errlog="1"/>
+ <test id="42" type="sleep" typeValue="1000" next="43" errnext="-1" errlog="1"/>
+ <test id="43" type="testScreenShot" typeValue="004-服务-附近营业厅-清空搜索框历史历史记录" next="44" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“服营厅”进入,判断是否存在ResourceId -->
+ <test id="44" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/textViewbusiness" next="45" errnext="-1" errlog="1"/>
+ <test id="45" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/textViewbusiness" next="46" errnext="-1" errlog="1"/>
+ 
+ <test id="46" type="sleep" typeValue="3000" next="47" errnext="-1" errlog="1"/>
+ <!-- 点击“五角星”收藏按钮，判断是否存在ResourceId，没有则跳转到ID49 -->
+ <test id="47" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/collect_but" next="48" errnext="49" errlog="0"/>
+ <test id="48" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/collect_but" next="51" errnext="-1" errlog="1"/>
+
+ <!--点击“五角星”收藏按钮，判断是否存在ClassIndex-->
+ <test id="49" type="testAssertByClassIndex" typeValue="android.widget.ImageButton##4" next="50" errnext="-1" errlog="1"/>
+ <test id="50" type="testClickByClassIndex" typeValue="android.widget.ImageButton##4" next="51" errnext="-1" errlog="1"/>
+ <test id="51" type="sleep" typeValue="3000" next="52" errnext="-1" errlog="1"/>
+ <test id="52" type="testScreenShot" typeValue="005-服务-附近营业厅-收藏服营厅成功" next="53" errnext="-1" errlog="1"/>
+  
+ <!-- 点击“查看地图”按钮，判断是否存在ResourceId，没有则跳转到ID55-->
+ <test id="53" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/map_txt" next="54" errnext="55" errlog="0"/>
+ <test id="54" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/map_txt" next="57" errnext="-1" errlog="1"/>
+
+ <!-- 点击“查看地图”按钮 ，判断是否存在Text-->
+ <test id="55" type="testAssertByText" typeValue="查看地图" next="56" errnext="-1" errlog="1"/>
+ <test id="56" type="testClickByText" typeValue="查看地图" next="57" errnext="-1" errlog="1"/>
+  <test id="57" type="sleep" typeValue="4000" next="58" errnext="-1" errlog="1"/>
+ <test id="58" type="testScreenShot" typeValue="006-服务-附近营业厅-进入地图模式" next="59" errnext="-1" errlog="1"/>
+ <!-- 点击“汽车线路” -->
+ <test id="59" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_map_driv" next="60" errnext="62" errlog="0"/>
+ <test id="60" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_map_driv" next="61" errnext="-1" errlog="1"/>
+ <test id="61" type="sleep" typeValue="5000" next="62" errnext="-1" errlog="1"/>
+  
+ <!-- TS0000005.点击“走路线路”，判断是否存在ResourceId，没有则跳转到ID65 -->
+ <test id="62" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_map_walk" next="63" errnext="65" errlog="0"/>
+ <test id="63" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_map_walk" next="64" errnext="-1" errlog="1"/>
+ <test id="64" type="sleep" typeValue="5000" next="65" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000006.点击左下角的“定位”按钮，判断是否存在ResourceId，没有则跳转到ID69 -->
+ <test id="65" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/position_img" next="66" errnext="69" errlog="0"/>
+ <test id="66" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/position_img" next="67" errnext="-1" errlog="1"/>
+ <test id="67" type="sleep" typeValue="3000" next="68" errnext="-1" errlog="1"/>
+ <test id="68" type="testScreenShot" typeValue="007-服务-附近营业厅-定位成功" next="69" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“我的收藏”按钮 ，判断是否存在ResourceId，没有则跳转到ID87-->
+ <test id="69" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_button2" next="70" errnext="87" errlog="0"/>
+ <test id="70" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_button2" next="71" errnext="-1" errlog="1"/>
+ <test id="71" type="sleep" typeValue="4000" next="72" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“下沙服营厅” ，进入详情列表，判断是否存在ResourceId，没有则跳转到ID74-->
+ <test id="72" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_addr_txt" next="73" errnext="74" errlog="0"/>
+ <test id="73" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/hall_addr_txt" next="76" errnext="-1" errlog="1"/>
+
+ <!-- 点击“下沙服营厅” ，进入详情列表，判断是否存在Text-->
+ <test id="74" type="testAssertByText" typeValue="地址:福田区下沙村花好园18、19号" next="75" errnext="-1" errlog="1"/>
+ <test id="75" type="testClickByText" typeValue="地址:福田区下沙村花好园18、19号" next="76" errnext="-1" errlog="1"/>
+ <test id="76" type="sleep" typeValue="3000" next="77" errnext="-1" errlog="1"/>
+ 
+ <!-- TS0000007.点击“五角星”取消收藏，判断是否存在ResourceId，没有则跳转到ID81 -->
+ <test id="77" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/collect_but" next="78" errnext="81" errlog="0"/>
+ <test id="78" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/collect_but" next="79" errnext="-1" errlog="1"/>
+ <test id="79" type="sleep" typeValue="2000" next="80" errnext="-1" errlog="1"/>
+ <test id="80" type="testScreenShot" typeValue="008-服务-附近营业厅-取消收藏服营厅成功" next="81" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层，判断是否存在ResourceId，没有则跳转到ID83 -->
+ <test id="81" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="82" errnext="83" errlog="0"/>
+ <test id="82" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="84" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层-->
+ <test id="83" type="testDeviceControl" typeValue="pressback" next="84" errnext="84" errlog="0"/>
+ <test id="84" type="sleep" typeValue="1000" next="85" errnext="-1" errlog="1"/>
+ 
+ <!-- 返回到上一层，判断是否存在ResourceId -->
+ <test id="85" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="86" errnext="-1" errlog="1"/>
+ <test id="86" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+ 
+
+ <!-- 连接ID69,无法进入“我的收藏”页面，返回到营业厅列表，取消“上沙服营厅”收藏 -->
+ <!-- 点击“营业厅列表” 按钮-->
+ <test id="87" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_button0" next="88" errnext="-1" errlog="1"/>
+ <test id="88" type="sleep" typeValue="2000" next="89" errnext="-1" errlog="1"/>
+ <!-- 取消“搜索下拉”出现的列表 -->
+ <test id="89" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_button0" next="90" errnext="-1" errlog="1"/>
+ 
+ <!--  点击下沙服营厅，进入“下沙服营厅”列表-->
+ <test id="90" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/address" next="91" errnext="-1" errlog="1"/>
+ <test id="91" type="sleep" typeValue="3000" next="92" errnext="-1" errlog="1"/>
+ <!-- 点击“五角星”收藏按钮，取消收藏 -->
+ <test id="92" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/collect_but" next="93" errnext="-1" errlog="1"/>
+ <test id="93" type="sleep" typeValue="3000" next="94" errnext="-1" errlog="1"/>
+ <!-- 返回到上一层 -->
+ <test id="94" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="95" errnext="-1" errlog="1"/>
+ <test id="95" type="sleep" typeValue="1000" next="96" errnext="-1" errlog="1"/>
+ <test id="96" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/>
+</root>

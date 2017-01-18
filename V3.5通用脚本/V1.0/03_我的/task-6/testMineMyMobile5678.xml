@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+ <!--判断页面是否为“我的”页面-->
+ <test id="1" type="testAssertByText" typeValue="我的" next="2" errnext="-1" errlog="1"/>
+ <test id="2" type="testClickByText" typeValue="我的" next="3" errnext="-1" errlog="1"/>
+ 
+ <!--判断是否已登录，如未登录则点击登录按钮-->
+ <test id="3" type="testAssertByText" typeValue="登录" next="4" errnext="9" errlog="0"/>
+ <test id="4" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/mine_login_btn" next="5" errnext="-1" errlog="1"/>
+ <!--输入本机的手机号码-->
+ <test id="5" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt##13554739295" next="6" errnext="-1" errlog="1"/>
+ <!--点击获取验证码-->
+ <test id="6" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_checksms_btn" next="7" errnext="-1" errlog="1"/>
+ <test id="7" type="sleep" typeValue="8000" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="9" errnext="-1" errlog="1"/>
+ 
+ <!--判断是否为“我的”页面-->
+ <test id="9" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/viewpager" next="10" errnext="-1" errlog="1"/>
+ <!--垂直向下滑动-->
+ <test id="10" type="testScrollVerticalByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/viewpager##scrolltoend##1" next="11" errnext="-1" errlog="1"/>
+ 
+ <!--判断“我的”页面是否有“我的账单”-->
+ <test id="11" type="testAssertByText" typeValue="我的账单" next="12" errnext="44" errlog="1"/>
+ <!--点击“我的移动”的“我的账单”-->
+ <test id="12" type="testClickByText" typeValue="我的账单" next="13" errnext="-1" errlog="1"/>
+ <test id="13" type="sleep" typeValue="3000" next="14" errnext="-1" errlog="1"/>
+ <test id="14" type="testScreenShot" typeValue="001-我的-我的账单" next="15" errnext="-1" errlog="1"/>
+ 
+ <!--判断“我的账单”页面是否有“近6个月消费图”-->
+ <test id="15" type="testAssertByText" typeValue="近6个月消费图" next="16" errnext="17" errlog="1"/>
+ <!-- 点击"我的账单"页面的“我的账单” -->
+ <test id="16" type="testClickByText" typeValue="近6个月消费图" next="17" errnext="-1" errlog="1"/> 
+ <!--判断"我的账单"页面是否显示当月账单详情-->
+ <test id="17" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/scrollView1" next="18" errnext="19" errlog="0"/>
+ <test id="18" type="testScrollVerticalByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/scrollView1##scrolltoend##5" next="19" errnext="-1" errlog="1"/>
+ <!--判断“我的账单”页面是否有“7月”-->
+ <test id="19" type="testAssertByText" typeValue="7月" next="20" errnext="21" errlog="0"/>
+ <!-- 点击"我的账单"页面的“7月” -->
+ <test id="20" type="testClickByText" typeValue="7月" next="21" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面是否有“9月”-->
+ <test id="21" type="testAssertByText" typeValue="9月" next="22" errnext="23" errlog="0"/>
+ <!-- 点击"我的账单"页面的“9月” -->
+ <test id="22" type="testClickByText" typeValue="9月" next="23" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面是否有“10月”-->
+ <test id="23" type="testAssertByText" typeValue="10月" next="24" errnext="25" errlog="0"/>
+ <!-- 点击"我的账单"页面的“10月” -->
+ <test id="24" type="testClickByText" typeValue="10月" next="25" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面是否有“11月”-->
+ <test id="25" type="testAssertByText" typeValue="11月" next="26" errnext="27" errlog="0"/>
+ <!-- 点击"我的账单"页面的“11月” -->
+ <test id="26" type="testClickByText" typeValue="11月" next="27" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面下方是否有“详单查询”按钮-->
+ <test id="27" type="testAssertByText" typeValue="详单查询" next="28" errnext="32" errlog="0"/>
+ <!-- 点击"我的账单"页面下方的“详单查询”按钮 -->
+ <test id="28" type="testClickByText" typeValue="详单查询" next="29" errnext="-1" errlog="1"/> 
+ <!--判断是否进入身份验证页面-->
+ <test id="29" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="31" errnext="30" errlog="1"/>
+ <test id="30" type="testDeviceControl" typeValue="pressback" next="32" errnext="32" errlog="1"/>
+ <!--点击身份验证页面的“X”按钮-->
+ <test id="31" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="32" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面是否有“12月”（当前月）-->
+ <test id="32" type="testAssertByText" typeValue="12月" next="33" errnext="34" errlog="0"/>
+ <!-- 点击"我的账单"页面的“12月” -->
+ <test id="33" type="testClickByText" typeValue="12月" next="34" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面下方是否有“去充值”按钮-->
+ <test id="34" type="testAssertByText" typeValue="去充值" next="35" errnext="38" errlog="0"/>
+ <!-- 点击"我的账单"页面下方的“去充值”按钮 -->
+ <test id="35" type="testClickByText" typeValue="去充值" next="36" errnext="-1" errlog="1"/> 
+ <test id="36" type="sleep" typeValue="3000" next="37" errnext="-1" errlog="1"/>
+ <!-- 点击返回 -->
+ <test id="37" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="38" errnext="-1" errlog="1"/> 
+ <!--判断“我的账单”页面下方是否有“详单查询”按钮-->
+ <test id="38" type="testAssertByText" typeValue="详单查询" next="39" errnext="43" errlog="0"/>
+ <!-- 点击"我的账单"页面下方的“详单查询”按钮 -->
+ <test id="39" type="testClickByText" typeValue="详单查询" next="40" errnext="-1" errlog="1"/> 
+ <!--判断是否进入身份验证页面-->
+ <test id="40" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="42" errnext="41" errlog="1"/>
+ <test id="41" type="testDeviceControl" typeValue="pressback" next="78" errnext="78" errlog="1"/>
+ <!--点击身份验证页面的“X”按钮-->
+ <test id="42" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="43" errnext="-1" errlog="1"/> 
+  
+ <!--点击“返回”-->
+ <test id="43" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="44" errnext="-1" errlog="1"/> 
+ 
+ <!--判断“我的”页面是否有“已订业务”-->
+ <test id="44" type="testAssertByText" typeValue="已订业务" next="45" errnext="81" errlog="1"/>
+ <test id="45" type="testClickByText" typeValue="已订业务" next="46" errnext="-1" errlog="1"/>
+ <test id="46" type="sleep" typeValue="5000" next="47" errnext="-1" errlog="1"/>
+ <test id="47" type="testScreenShot" typeValue="002-我的-已订业务" next="48" errnext="-1" errlog="1"/>
+ <!--判断“已订业务”页面是否有“更多业务办理”按钮-->
+ <test id="48" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/moreBusiness" next="53" errnext="49" errlog="0"/>
+ <test id="49" type="sleep" typeValue="10000" next="50" errnext="-1" errlog="1"/> 
+ <!--判断是否登录异常，提示“系统繁忙”-->
+ <test id="50" type="testAssertByText" typeValue="知道了" next="51" errnext="-1" errlog="0"/>
+ <!--点击"知道了"-->
+ <test id="51" type="testClickByText" typeValue="知道了" next="52" errnext="-1" errlog="1"/>
+ <test id="52" type="testDeviceControl" typeValue="pressback" next="-1" errnext="-1" errlog="1"/>
+ <!--点击“更多业务办理”-->
+ <test id="53" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/moreBusiness" next="54" errnext="-1" errlog="1"/> 
+ <test id="54" type="testScreenShot" typeValue="003-我的-已订业务-套餐订购" next="55" errnext="-1" errlog="1"/> 
+ <!--判断“已订业务”页面是否有“返回”按钮-->
+ <test id="55" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="56" errnext="-1" errlog="1"/>
+ <test id="56" type="testDeviceControl" typeValue="pressback" next="58" errnext="58" errlog="1"/>
+ <!--点击左上角的返回键-->
+ <test id="57" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="58" errnext="-1" errlog="1"/> 
+  
+ <!--判断“已订业务”页面是否有“增值业务”-->
+ <test id="58" type="testAssertByText" typeValue="增值业务" next="59" errnext="64" errlog="0"/> 
+ <test id="59" type="testClickByText" typeValue="增值业务" next="60" errnext="-1" errlog="1"/>
+ <!--判断“已订业务”页面是否有“退订”按钮-->
+ <test id="60" type="testAssertByText" typeValue="退订" next="61" errnext="-1" errlog="1"/>
+ <test id="61" type="testClickByText" typeValue="退订" next="62" errnext="-1" errlog="1"/>
+ <!--判断提示框是否有“取消”，如果没有则返回-->
+ <test id="62" type="testAssertByText" typeValue="取消" next="63" errnext="-1" errlog="1"/> 
+ <test id="63" type="testClickByText" typeValue="取消" next="64" errnext="-1" errlog="1"/>
+ <!--判断“已订业务”页面是否有“基础功能”-->
+ <test id="64" type="testAssertByText" typeValue="基础功能" next="65" errnext="68" errlog="1"/> 
+ <test id="65" type="testClickByText" typeValue="基础功能" next="66" errnext="-1" errlog="1"/>
+ <!--判断当前“已订业务”页面显示“基础功能”列表-->
+ <test id="66" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/list" next="67" errnext="68" errlog="0"/>
+ <!--垂直向下滑动-->
+ <test id="67" type="testVertiFlingByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/list##flingtoend" next="68" errnext="-1" errlog="1"/>
+ <!--判断“已订业务”页面是否有“其他”标签页-->
+ <test id="68" type="testAssertByText" typeValue="其他" next="69" errnext="72" errlog="1"/> 
+ <test id="69" type="testClickByText" typeValue="其他" next="70" errnext="-1" errlog="1"/>
+ <!--判断当前“已订业务”页面显示“其他”列表-->
+ <test id="70" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/list" next="71" errnext="72" errlog="0"/>
+ <test id="71" type="testVertiFlingByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/list##flingtoend" next="72" errnext="-1" errlog="1"/>
+ <!--判断当前“已订业务”页面是否有“更多业务办理”按钮-->
+ <test id="72" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/moreBusiness" next="77" errnext="73" errlog="0"/>
+ <test id="73" type="sleep" typeValue="10000" next="74" errnext="-1" errlog="1"/> 
+ <!--判断是否登录异常，提示“系统繁忙”-->
+ <test id="74" type="testAssertByText" typeValue="知道了" next="75" errnext="-1" errlog="0"/>
+ <!--点击"知道了"-->
+ <test id="75" type="testClickByText" typeValue="知道了" next="76" errnext="-1" errlog="1"/>
+ <test id="76" type="testDeviceControl" typeValue="pressback" next="-1" errnext="-1" errlog="1"/>
+ <!--点击“更多业务办理”-->
+ <test id="77" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/moreBusiness" next="78" errnext="-1" errlog="1"/> 
+ <test id="78" type="testScreenShot" typeValue="004-我的-已订业务-业务办理" next="79" errnext="-1" errlog="1"/> 
+ <!--点击左上角的返回键-->
+ <test id="79" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="80" errnext="-1" errlog="1"/> 
+ <test id="80" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="81" errnext="-1" errlog="1"/> 
+ 
+ <!--判断“我的移动”是否有“详单查询”-->
+ <!--注：“详单查询”在“首页”有验证-->
+ <test id="81" type="testAssertByText" typeValue="详单查询" next="82" errnext="89" errlog="1"/>
+ <!--点击“我的移动”的“详单查询”-->
+ <test id="82" type="testClickByText" typeValue="详单查询" next="83" errnext="-1" errlog="1"/>
+ <test id="83" type="sleep" typeValue="3000" next="84" errnext="-1" errlog="1"/>
+ <test id="84" type="testScreenShot" typeValue="005-我的-详单查询-登录页面" next="85" errnext="-1" errlog="1"/>
+ <!--判断登录页面左上角是否有“X”按钮-->
+ <test id="85" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="87" errnext="86" errlog="1"/>
+ <test id="86" type="testDeviceControl" typeValue="pressback" next="90" errnext="90" errlog="1"/>
+ <!--点击登录页面左上角的“X”按钮-->
+ <test id="87" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="89" errnext="-1" errlog="1"/> 
+ 
+ <!--判断“我的移动”是否有“详单分析”-->
+ <test id="89" type="testAssertByText" typeValue="详单分析" next="90" errnext="-1" errlog="1"/>
+ <!--点击"详单分析"-->
+ <test id="90" type="testClickByText" typeValue="详单分析" next="91" errnext="-1" errlog="1"/>
+ <test id="91" type="sleep" typeValue="3000" next="92" errnext="-1" errlog="1"/>
+ <test id="92" type="testScreenShot" typeValue="006-我的-详单分析-登录页面" next="93" errnext="-1" errlog="1"/>
+ <!--判断登录页面是否有密码输入框-->
+ <test id="93" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_password_edt" next="94" errnext="95" errlog="1"/>
+ <!--输入本机手机号的服务密码-->
+ <test id="94" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_password_edt##081695" next="95" errnext="-1" errlog="1"/> 
+ <!--判断登录页面是否有“点击获取”验证码按钮-->
+ <test id="95" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/checksms_btn" next="96" errnext="98" errlog="1"/>
+ <!--点击获取验证码-->
+ <test id="96" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/checksms_btn" next="97" errnext="-1" errlog="1"/> 
+ <test id="97" type="sleep" typeValue="20000" next="98" errnext="-1" errlog="1"/>
+ <!--判断登录页面是否有“登录”按钮-->
+ <test id="98" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="99" errnext="106" errlog="1"/>
+ <!--点击“登录”按钮-->
+ <test id="99" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_btn_lay" next="100" errnext="-1" errlog="1"/> 
+ <test id="100" type="sleep" typeValue="20000" next="101" errnext="-1" errlog="1"/>
+ <test id="101" type="testScreenShot" typeValue="007-我的-详单分析-通话详单分析" next="102" errnext="-1" errlog="1"/>
+ <!--判断是否进入“通话详单分析”页面-->
+ <test id="102" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/layoutwindow" next="103" errnext="104" errlog="0"/>
+ <test id="103" type="testScrollVerticalByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/layoutwindow##scrolltoend##2" next="108" errnext="-1" errlog="1"/>
+ <!--判断是否登录异常，提示“系统繁忙”-->
+ <test id="104" type="testAssertByText" typeValue="知道了" next="105" errnext="106" errlog="0"/>
+ <!--点击"知道了"-->
+ <test id="105" type="testClickByText" typeValue="知道了" next="106" errnext="-1" errlog="1"/>
+ <!--判断登录页面是否有“X”按钮-->
+ <test id="106" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="107" errnext="-1" errlog="1"/>
+ <!--点击身份验证页面左上角的"X"按钮-->
+ <test id="107" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/login_close" next="-1" errnext="-1" errlog="1"/> 
+ <!--点击“返回”-->
+ <test id="108" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="-1" errnext="-1" errlog="1"/> 
+</root>
