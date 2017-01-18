@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+<!-- 测试github -->
+  <!--点击左上角三根横线-->
+ <test id="1" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="2" errnext="-1"  errlog="1"/>
+ <test id="2" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="3" errnext="-1"  errlog="1"/>
+ 
+
+ <!--DW0000001.验证定位当前位置--> 
+ <!--点击 【定位】-->
+ <test id="3" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="4" errnext="-1"  errlog="1"/>
+ <test id="4" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="5" errnext="-1" errlog="1"/>
+ <test id="5" type="testScreenShot" typeValue="001-增加页-定位-定位页面" next="6" errnext="-1" errlog="1"/>
+ <!--点击左上角 【返回】-->
+ <test id="6" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="7" errnext="-1"  errlog="1"/>
+ <test id="7" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="8" errnext="-1" errlog="1"/>
+ <!--点击 【定位】-->
+ <test id="8" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="9" errnext="-1"  errlog="1"/>
+ <test id="9" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="100" errnext="-1" errlog="1"/>
+ <!--点击 【当前位置】-->
+ <test id="100" type="testAssertByText" typeValue="没有定位到你的城市" next="101" errnext="10" errlog="0"/>
+ 
+ <test id="101" type="testAssertByText" typeValue="上海" next="102" errnext="-1" errlog="1"/>
+ <test id="102" type="testClickByText" typeValue="上海" next="103" errnext="-1" errlog="1"/>
+ <!-- 点击列表第一项 -->
+ <test id="103" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="104" errnext="-1" errlog="1"/>
+ <test id="104" type="testClickByResIdIndex" typeValue="com.greenpoint.android.mc10086.activity:id/listitem##0" next="012" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击当点位置 -->
+ <test id="10" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_showtop_txt" next="11" errnext="-1"  errlog="1"/>
+ <test id="11" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_showtop_txt" next="12" errnext="-1" errlog="1"/>
+ <test id="12" type="testScreenShot" typeValue="002-增加页-定位-当前位置" next="012" errnext="-1" errlog="1"/>
+ <test id="012" type="sleep" typeValue="4000" next="105" errnext="-1" errlog="1"/>
+<!-- 此处增加异常场景，关闭铃铛广告，点击忽略 -->
+ <test id="105" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="106" errnext="107" errlog="0"/>
+ <test id="106" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dismiss_bt" next="107" errnext="-1" errlog="1"/>
+ 
+ <test id="107" type="testAssertByText" typeValue="忽略" next="108" errnext="13"  errlog="0"/>
+ <test id="108" type="testClickByText" typeValue="忽略" next="13" errnext="-1" errlog="1"/>
+ 
+ 
+ <!--DW0000002.验证定位选择首位省份和城市--> 
+ <!--点击 【定位】-->
+ <test id="13" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="14" errnext="-1"  errlog="1"/>
+ <test id="14" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="15" errnext="-1" errlog="1"/>
+ <!--点击选择省份（第一个）-->
+ <test id="15" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="16" errnext="-1"  errlog="1"/>
+ <test id="16" type="testClickByResIdIndex" typeValue="com.greenpoint.android.mc10086.activity:id/listitem##0" next="17" errnext="-1" errlog="1"/>
+ <!--点击选择城市（第一个）-->
+ <test id="17" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="18" errnext="-1"  errlog="1"/>
+ <test id="18" type="testClickByResIdIndex" typeValue="com.greenpoint.android.mc10086.activity:id/listitem##0" next="19" errnext="-1" errlog="1"/>
+ <test id="19" type="testScreenShot" typeValue="003-增加页-定位-选择第一位省份和城市" next="20" errnext="-1" errlog="1"/>
+ 
+ 
+ <!--DW0000003.验证滑动后选择任一省份和城市--> 
+ <!--点击 【定位】--> 
+ <test id="20" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="21" errnext="-1"  errlog="1"/>
+ <test id="21" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="22" errnext="-1" errlog="1"/>
+ <!--垂直滑动 【请选择省份】项-->
+ <test id="22" type="testVertiFling" typeValue="flingtoend" next="23" errnext="-1" errlog="1"/>
+ <!--点击选择省份（任一个）-->
+ <test id="23" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="24" errnext="-1"  errlog="1"/>
+ <test id="24" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="25" errnext="-1" errlog="1"/>
+ <!--垂直滑动 【请选择城市】项-->
+ <test id="25" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="26" errnext="-1"  errlog="1"/>
+ <test id="26" type="testVertiFlingByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem##flingtoend" next="27" errnext="-1" errlog="1"/>
+ <!--点击选择城市（任一个）-->
+ <test id="27" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="28" errnext="-1"  errlog="1"/>
+ <test id="28" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/listitem" next="29" errnext="-1" errlog="1"/>
+ <test id="29" type="testScreenShot" typeValue="004-增加页-定位-选择任一省份和城市" next="30" errnext="-1" errlog="1"/>
+ 
+ 
+ <!--DW0000004.验证搜索框输入异常项搜索定位省份和城市--> 
+ <test id="30" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="31" errnext="-1"  errlog="1"/>
+ <test id="31" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_state_layout" next="32" errnext="-1" errlog="1"/>
+ <test id="32" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt" next="33" errnext="-1"  errlog="1"/>
+ <test id="33" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_searchcontent_edt##guangdong" next="034" errnext="-1" errlog="1"/>
+ 
+ <!-- 此处增添新方法，功能等于按下一次回车键 -->
+ <test id="034" type="testSendMsm" typeValue="type=testSendMsm" next="34" errnext="-1" errlog="1"/>
+ 
+ <test id="34" type="testScreenShot" typeValue="005-增加页-定位-搜索异常项" next="35" errnext="-1" errlog="1"/>
+ 
+ 
+ 
+ 
+ 
+ <!--DW0000005.验证清除搜索框--> 
+ <!--点击 【清除】搜索框-->
+  <test id="35" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_delete_btn" next="36" errnext="38"  errlog="0"/>
+ <test id="36" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/citychoose_delete_btn" next="37" errnext="-1" errlog="1"/>
+ <test id="37" type="testScreenShot" typeValue="006-增加页-定位-清除搜索框" next="38" errnext="-1" errlog="1"/>
+ <!-- 点击退出 -->
+ <test id="38" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="39" errnext="-1"  errlog="1"/>
+ <test id="39" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="40" errnext="-1" errlog="1"/>
+<!-- 点击三横线 -->
+ <test id="40" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="41" errnext="-1"  errlog="1"/>
+ <test id="41" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="-1" errnext="-1"  errlog="1"/>
+</root> 
