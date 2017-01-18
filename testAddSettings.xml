@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+<!-- 测试GIT -->
+  <!-- 判断【三点】按钮，是否有id -->
+  <test id="1" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="2" errnext="-1"  errlog="1"/> 
+  <!-- 点击【三点】按钮 -->
+  <test id="2" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="3" errnext="-1"  errlog="1"/> 
+
+  
+  
+  <!-- 判断【设置】是否存在text -->
+  <test id="3" type="testAssertByText" typeValue="设置" next="4" errnext="5" errlog="0"/>
+  <!-- 点击【设置】按钮 -->
+  <test id="4" type="testClickByText" typeValue="设置" next="7" errnext="-1" errlog="1"/>
+  
+  <!-- 判断【设置】是否存在id -->
+  <test id="5" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_setting_img" next="6" errnext="-1" errlog="1"/>
+  <!-- 点击【设置】按钮 -->
+  <test id="6" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/menu_setting_img" next="7" errnext="-1" errlog="1"/>
+  <test id="7" type="testScreenShot" typeValue="001-增加页-设置-设置页面" next="8" errnext="-1" errlog="1"/>
+  
+  
+  
+  
+  <!-- 判断【清除缓存】是否存在text -->
+  <test id="8" type="testAssertByText" typeValue="清除缓存" next="9" errnext="-1" errlog="1"/>
+  <!-- 点击【清除缓存】按钮 -->
+  <test id="9" type="testClickByText" typeValue="清除缓存" next="10" errnext="-1" errlog="1"/>
+  
+  
+  
+  
+  <!-- 判断【取消】是否存在text -->
+  <test id="10" type="testAssertByText" typeValue="取消" next="11" errnext="12" errlog="0"/>
+  <!-- 点击【取消】按钮 -->
+  <test id="11" type="testClickByText" typeValue="取消" next="14" errnext="-1" errlog="1"/>
+  
+  <!-- 判断【取消】按钮是否存在id -->
+  <test id="12" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="13" errnext="-1" errlog="1"/>
+  <!-- 点击【取消】按钮 -->
+  <test id="13" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="14" errnext="-1" errlog="1"/>
+  
+  
+  
+  <!-- 判断【清除缓存】是否存在text -->
+  <test id="14" type="testAssertByText" typeValue="清除缓存" next="15" errnext="-1" errlog="1"/>
+  <!-- 点击【清除缓存】按钮 -->
+  <test id="15" type="testClickByText" typeValue="清除缓存" next="16" errnext="-1" errlog="1"/>
+  <test id="16" type="testScreenShot" typeValue="002-增加页-设置-清除缓存" next="17" errnext="-1" errlog="1"/>
+  
+  
+  <!-- 判断【确定】是否存在text -->
+  <test id="17" type="testAssertByText" typeValue="确定" next="18" errnext="19" errlog="0"/>
+   <!-- 点击【确定】 -->
+  <test id="18" type="testClickByText" typeValue="确定" next="21" errnext="-1" errlog="1"/>
+  
+  <!-- 判断【确定】是否存在text -->
+  <test id="19" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn1" next="20" errnext="-1" errlog="1"/>
+  <!-- 点击【确定】 -->
+  <test id="20" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn1" next="21" errnext="-1" errlog="1"/>
+  
+  
+ 
+  
+  
+  <!--SZ0000003.验证设置登录时间提醒按钮功能-->
+  <!--  判断【登录时间提醒】是否存在text  -->
+  <test id="21" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_logintimeremind_txtswt" next="22" errnext="-1" errlog="1"/>
+  <!--点击设置关闭【登录时间提醒】-->
+  <test id="22" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_logintimeremind_txtswt" next="24" errnext="-1" errlog="1"/>
+  <!--点击设置开启【登录时间提醒】-->
+  <test id="24" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_logintimeremind_txtswt" next="26" errnext="-1" errlog="1"/>
+  <test id="26" type="sleep" typeValue="2000" next="27" errnext="-1" errlog="1"/>
+  
+  
+  
+  
+  <!--SZ0000004.验证设置登录短信提醒按钮功能-->
+  <!--  判断【登录短信提醒】是否存在id  -->
+  <test id="27" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginmessageremind_txtswt" next="28" errnext="-1" errlog="1"/>
+  <!--点击设置开启【登录短信提醒】-->
+  <test id="28" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginmessageremind_txtswt" next="29" errnext="-1" errlog="1"/>
+  <!--点击设置关闭【登录短信提醒】-->
+  <test id="29" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginmessageremind_txtswt" next="30" errnext="-1" errlog="1"/>
+  <!--  判断【登录短信提醒】是否存在id  -->
+  <test id="30" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginmessageremind_txtswt" next="31" errnext="-1" errlog="1"/>
+  <!--点击设置关闭【登录短信提醒】-->
+  <test id="31" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginmessageremind_txtswt" next="32" errnext="-1" errlog="1"/>
+  
+  
+  
+  <!--SZ0000006.验证设置推送消息通知按钮功能-->
+  <!--判断设置【推送消息通知】是否存在id-->
+  <test id="32" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_pushmessage_txtswt" next="33" errnext="-1" errlog="1"/>
+  <!--点击设置【推送消息通知】-->
+  <test id="33" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_pushmessage_txtswt" next="34" errnext="-1" errlog="1"/>
+  <!--判断设置【推送消息通知】是否存在id-->
+  <test id="34" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_pushmessage_txtswt" next="35" errnext="-1" errlog="1"/>
+  <!--点击设置【推送消息通知】-->
+  <test id="35" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_pushmessage_txtswt" next="36" errnext="-1" errlog="1"/>
+  <test id="36" type="sleep" typeValue="2000" next="37" errnext="-1" errlog="1"/>
+  
+  
+  
+  <!--SZ0000007.验证设置夜间防骚扰模式按钮功能-->
+  <!--判断设置【夜间防骚扰模式】是否有id-->
+  <test id="37" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_nightmode_txtswt" next="38" errnext="-1" errlog="1"/>
+  <!--点击设置【夜间防骚扰模式】-->
+  <test id="38" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_nightmode_txtswt" next="39" errnext="-1" errlog="1"/>
+  <test id="39" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_nightmode_txtswt" next="40" errnext="-1" errlog="1"/>
+  <test id="40" type="sleep" typeValue="3000" next="41" errnext="-1" errlog="1"/>
+  
+ 
+
+  <!--SZ0000005.验证设置免认证自动登录按钮功能-->
+  <!--判断设置【免认证自动登录】是否存在-->
+  <test id="41" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginfree_txtswt" next="42" errnext="-1" errlog="1"/>
+  <!--点击设置【免认证自动登录】-->
+  <test id="42" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginfree_txtswt" next="43" errnext="-1" errlog="1"/>
+  <test id="43" type="testScreenShot" typeValue="003-增加页-设置-免认证自动登录开启" next="44" errnext="-1" errlog="1"/>
+  <!-- 判断判断设置【免认证自动登录】是否存在 -->
+  <test id="44" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/settings_loginfree_txtswt" next="45" errnext="-1" errlog="1"/>
+  
+  
+   <!-- 判断【绑定新浪微博】是否存在，不存在则滑动下面在判断 -->
+  <test id="45" type="testAssertByText" typeValue="绑定新浪微博" next="48" errnext="46" errlog="0"/>
+  <!-- 滑动 -->
+  <test id="46" type="testVertiFling" typeValue="flingtoend" next="47" errnext="47" errlog="1" /> 
+  
+
+  <!-- 判断【新浪微博】是否存在text -->
+  <test id="47" type="testAssertByText" typeValue="绑定新浪微博" next="48" errnext="-1" errlog="1"/>
+  <!-- 点击【绑定新浪微博】新浪微博 -->
+  <test id="48" type="testClickByText" typeValue="绑定新浪微博" next="049" errnext="-1" errlog="1"/>
+  <test id="049" type="sleep" typeValue="3000" next="49" errnext="-1" errlog="1"/>
+  <test id="49" type="testScreenShot" typeValue="004-增加页-设置-绑定新浪微博" next="50" errnext="-1" errlog="1"/> 
+  
+  
+  
+  <!--  判断【取消】是否存在text  -->
+  <test id="50" type="testAssertByText" typeValue="取消" next="51" errnext="52" errlog="0"/>
+  <test id="51" type="testClickByText" typeValue="取消" next="53" errnext="-1" errlog="1"/>
+  <!-- 有些手机未绑定手机微博，进入注册页面后点击返回 -->
+  <test id="52" type="testDeviceControl" typeValue="pressback" next="53" errnext="53" errlog="1"/>
+  
+  
+ 
+  
+  <!-- 判断返回按钮是否存在 -->
+  <test id="53" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="54" errnext="-1" errlog="1"/>
+  <!-- 点击返回按钮，回到增加页 -->
+  <test id="54" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="55" errnext="-1" errlog="1"/>
+  
+  
+  <!-- 判断【三点】按钮，是否有id -->
+  <test id="55" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="56" errnext="-1"  errlog="0"/> 
+  <!-- 点击【三点】按钮 -->
+  <test id="56" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="57" errnext="-1"  errlog="1"/> 
+  <test id="57" type="sleep" typeValue="2000" next="-1" errnext="-1" errlog="1"/>
+  </root>
