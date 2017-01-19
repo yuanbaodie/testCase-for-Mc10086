@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<root startid="1" nextDoc="-1" errNextDoc="-1" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
- <test id="106" type="sleep" typeValue="3000" next="107" errnext="-1" errlog="1"/> 
- <test id="1" type="testCloseAPP" typeValue="com.greenpoint.android.mc10086.activity" next="-1" errnext="-1" errlog="1"/>
- </root> 
