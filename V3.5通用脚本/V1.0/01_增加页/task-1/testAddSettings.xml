@@ -2,7 +2,7 @@
 <root startid="1" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
 
   <!-- 判断【三点】按钮，是否有id -->
-  <test id="1" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="2" errnext="-1"  errlog="1"/> 
+   <test id="1" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="2" errnext="-1"  errlog="1"/> 
   <!-- 点击【三点】按钮 -->
   <test id="2" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_leftbtn_img" next="3" errnext="-1"  errlog="1"/> 
 

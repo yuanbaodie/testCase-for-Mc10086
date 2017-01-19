@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <root startid="1" nextDoc="testInitial.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
- <test id="1" type="testWakeupControl" typeValue="sdcard/TestCase/XMLtestFile/Common/phoneMessageList.xml" next="2" errnext="-1" errlog="1"/> 
+  <test id="1" type="testWakeupControl" typeValue="sdcard/TestCase/XMLtestFile/Common/phoneMessageList.xml" next="2" errnext="-1" errlog="1"/> 
  <test id="2" type="sleep" typeValue="3000" next="-1" errnext="-1" errlog="1"/> 
  </root>

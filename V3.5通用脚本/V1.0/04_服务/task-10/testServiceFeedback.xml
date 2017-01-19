@@ -7,7 +7,7 @@
  <test id="03" type="testAssertByText" typeValue="登录" next="04" errnext="1" errlog="0"/>
  <test id="04" type="testClickByText" typeValue="登录" next="05" errnext="-1" errlog="1"/>
  
- <!--输入本机的手机号码-->
+  <!--输入本机的手机号码-->
  <test id="05" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt" next="06" errnext="-1" errlog="1"/>
  <test id="06" type="testInputTextByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/user_phoneno_edt##13554720631" next="07" errnext="-1" errlog="1"/>
  

@@ -2,7 +2,7 @@
 <root startid="1" nextDoc="testServiceFeedback.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
  <!--打开APP的初始化内容，跳过广告、忽略升级-->
  <test id="1" type="testOpenAPP" typeValue="com.greenpoint.android.mc10086.activity##com.leadeon.cmcc.base.StartPageActivity" next="2" errnext="-1" errlog="1"/>  
- <test id="2" type="sleep" typeValue="8000" next="3" errnext="-1" errlog="1"/>
+  <test id="2" type="sleep" typeValue="8000" next="3" errnext="-1" errlog="1"/>
 <!--判断“权限请求”的提示框是否存在-->
  <test id="3" type="testAssertByText" typeValue="允许" next="4" errnext="5" errlog="0"/>
  <test id="4" type="testClickByText" typeValue="允许" next="5" errnext="-1" errlog="1"/>  
