@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root startid="051" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+<root startid="051" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
  <!-- 点击“服务”，进入到服务模块，判断是否存在Text  -->
  <test id="1" type="testAssertByText" typeValue="服务" next="2" errnext="-1" errlog="1"/> 
  <test id="2" type="testClickByText" typeValue="服务" next="3" errnext="-1" errlog="1"/>
