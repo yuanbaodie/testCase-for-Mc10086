@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
-<root startid="1" nextDoc="testHomeMyBill.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil">
+<root startid="1" nextDoc="testHomeMyBill.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
  <!--打开APP的初始化内容，跳过广告、忽略升级-->
  <test id="1" type="testOpenAPP" typeValue="com.greenpoint.android.mc10086.activity##com.leadeon.cmcc.base.StartPageActivity" next="2" errnext="-1" errlog="1"/>  
  <test id="2" type="sleep" typeValue="8000" next="3" errnext="-1" errlog="1"/>
