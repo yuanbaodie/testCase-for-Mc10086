@@ -3,7 +3,7 @@
  <test id="1" type="testAssertByText" typeValue="我的" next="2" errnext="-1" errlog="1"/>
  <test id="2" type="testClickByText" typeValue="我的" next="3" errnext="-1" errlog="1"/>
  
-  <!--判断是否已登录，如未登录则点击登录按钮-->
+ <!--判断是否已登录，如未登录则点击登录按钮-->
  <test id="3" type="testAssertByText" typeValue="登录" next="4" errnext="13" errlog="0"/>
  <test id="4" type="testClickByText" typeValue="登录" next="5" errnext="-1" errlog="1"/>
  

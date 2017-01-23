@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root startid="01" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
- <test id="01" type="testAssertByText" typeValue="我的" next="02" errnext="-1" errlog="1"/>
+  <test id="01" type="testAssertByText" typeValue="我的" next="02" errnext="-1" errlog="1"/>
  <test id="02" type="testClickByText" typeValue="我的" next="03" errnext="-1" errlog="1"/>
  
  <!--判断是否已登录，如未登录则点击登录按钮-->
