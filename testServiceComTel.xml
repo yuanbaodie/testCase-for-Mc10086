@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root startid="051" nextDoc="testOver.xml" errNextDoc="testOver.xml" className="com.test.app.TestUtil" packageName="com.greenpoint.android.mc10086.activity">
+ <!-- 点击“服务”，进入到服务模块，判断是否存在Text  -->
+ <test id="1" type="testAssertByText" typeValue="服务" next="2" errnext="-1" errlog="1"/> 
+ <test id="2" type="testClickByText" typeValue="服务" next="3" errnext="-1" errlog="1"/>
+ <test id="3" type="sleep" typeValue="4000" next="4" errnext="-1" errlog="1"/>
+ 
+ <!--新装APP出现提示，点击取消图标展示-->
+ <test id="4" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="5" errnext="-1" errlog="1"/> 
+ <test id="5" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/radio_btn_home" next="6" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“服务”，判断是否存在Text -->
+ <test id="6" type="testAssertByText" typeValue="服务" next="7" errnext="-1" errlog="1"/> 
+ <test id="7" type="testClickByText" typeValue="服务" next="8" errnext="-1" errlog="1"/>
+ <test id="8" type="sleep" typeValue="4000" next="9" errnext="-1" errlog="1"/>
+ 
+ <!-- 点击“常用号码”按钮，判断是否存在Text -->
+ <test id="9" type="testAssertByText" typeValue="常用号码" next="10" errnext="-1" errlog="1"/>
+ <test id="10" type="testClickByText" typeValue="常用号码" next="11" errnext="-1" errlog="1"/>
+ <test id="11" type="sleep" typeValue="4000" next="12" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打移动客服电话10086，判断是否存在Text，没有则跳转到ID014 -->
+ <test id="12" type="testAssertByText" typeValue="10086" next="13" errnext="014" errlog="0"/>
+ <test id="13" type="testClickByText" typeValue="10086" next="15" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打移动客服电话10086，判断是否存在Text -->
+ <test id="014" type="testAssertByText" typeValue="移动客服号码" next="14" errnext="-1" errlog="1"/> 
+ <test id="14" type="testClickByText" typeValue="移动客服号码" next="15" errnext="-1" errlog="1"/>
+ <test id="15" type="sleep" typeValue="1000" next="16" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“取消”按钮，判断是否存在Text，没有则跳转到ID018 -->
+ <test id="16" type="testAssertByText" typeValue="取消" next="17" errnext="018" errlog="0"/>
+ <test id="17" type="testClickByText" typeValue="取消" next="19" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，判断是否存在ResourceId -->
+ <test id="018" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn1" next="18" errnext="-1" errlog="1"/>
+ <test id="18" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn1" next="19" errnext="-1" errlog="1"/>
+  
+ <!-- 播打移动客服电话10086，判断是否存在Text，没有则跳转到ID22 -->
+ <test id="19" type="testAssertByText" typeValue="10086" next="21" errnext="22" errlog="0"/>
+ <test id="21" type="testClickByText" typeValue="10086" next="24" errnext="-1" errlog="1"/>
+
+ <!-- 播打移动客服电话10086，判断是否存在Text -->
+ <test id="22" type="testAssertByText" typeValue="移动客服号码" next="23" errnext="-1" errlog="1"/>
+ <test id="23" type="testClickByText" typeValue="移动客服号码" next="24" errnext="-1" errlog="1"/>
+ <test id="24" type="sleep" typeValue="1000" next="025" errnext="-1" errlog="1"/>
+ <!-- 跳出无法拨打电话提示，设为“允许拨打” -->
+ <test id="025" type="testAssertByText" typeValue="设为允许" next="026" errnext="25" errlog="0"/>
+ <test id="026" type="testClickByText" typeValue="设为允许" next="25" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在Text，没有则跳转到ID27 -->
+ <test id="25" type="testAssertByText" typeValue="确定" next="26" errnext="27" errlog="0"/>
+ <test id="26" type="testClickByText" typeValue="确定" next="29" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在Text -->
+ <test id="27" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="28" errnext="-1" errlog="1"/>
+ <test id="28" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="29" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出"安全警告"，勾选“记住我的选择”，点击允许。没有安全警告则跳转到ID034 -->
+ <test id="29" type="testAssertByText" typeValue="记住我的选择。" next="30" errnext="31" errlog="0"/>
+ <test id="30" type="testClickByText" typeValue="记住我的选择。" next="034" errnext="-1" errlog="1"/>
+ <test id="31" type="testAssertByText" typeValue="允许" next="32" errnext="33" errlog="0"/>
+ <test id="32" type="testClickByText" typeValue="允许" next="33" errnext="-1" errlog="1"/>
+ <test id="33" type="sleep" typeValue="2000" next="034" errnext="-1" errlog="1"/>
+ 
+ <!-- 如果手机没SIM卡，则点击“确定”按钮，判断是否存在Text，没有则跳转到ID35 -->
+ <test id="034" type="testAssertByText" typeValue="确定" next="34" errnext="35" errlog="0"/>
+ <test id="34" type="testClickByText" typeValue="确定" next="35" errnext="-1" errlog="1"/> 
+ <test id="35" type="sleep" typeValue="8000" next="36" errnext="-1" errlog="1"/>
+ <!-- 播打10086客服电话截图 -->
+ <test id="36" type="testScreenShot" typeValue="001-服务-常用号码-播打10086客服电话" next="37" errnext="-1" errlog="1"/>
+ <test id="37" type="testCallOff" typeValue="callout" next="101" errnext="-1" errlog="0"/>
+ <test id="101" type="sleep" typeValue="3000" next="38" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打资费查询电话1008611，判断是否存在Text，没有则跳转到ID40 -->
+ <test id="38" type="testAssertByText" typeValue="1008611" next="39" errnext="102" errlog="0"/>
+ <test id="39" type="testClickByText" typeValue="1008611" next="41" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打资费查询电话1008611，判断是否存在Text -->
+ <test id="102" type="sleep" typeValue="5000" next="40" errnext="-1" errlog="1"/>
+ <test id="40" type="testClickByText" typeValue="资费查询号码" next="41" errnext="-1" errlog="1"/>
+ <test id="41" type="sleep" typeValue="2000" next="42" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在Text，没有则跳转到ID044 -->
+ <test id="42" type="testAssertByText" typeValue="确定" next="43" errnext="043" errlog="0"/>
+ <test id="43" type="testClickByText" typeValue="确定" next="044" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在ResourceId -->
+ <test id="043" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="44" errnext="-1" errlog="1"/>
+ <test id="44" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="044" errnext="-1" errlog="1"/>
+ <test id="044" type="sleep" typeValue="2000" next="045" errnext="-1" errlog="1"/>
+
+ <!-- 如果手机没SIM卡，则点击“确定”按钮,判断是否存在Text -->
+ <test id="045" type="testAssertByText" typeValue="确定" next="45" errnext="46" errlog="0"/>
+ <test id="45" type="testClickByText" typeValue="确定" next="46" errnext="-1" errlog="1"/>
+ 
+ <test id="46" type="sleep" typeValue="10000" next="47" errnext="-1" errlog="1"/>
+ <!-- 播打10086客服电话截图 -->
+ <test id="47" type="testScreenShot" typeValue="002-服务-常用号码-播打1008611资费查询电话" next="48" errnext="-1" errlog="1"/>
+ <test id="48" type="testCallOff" typeValue="callout" next="049" errnext="049" errlog="0"/>
+ <test id="049" type="sleep" typeValue="5000" next="49" errnext="-1" errlog="1"/>
+
+ <!-- 播打充值电话13800138000，判断是否存在Text，没有则跳转到ID051 -->
+ <test id="49" type="testAssertByText" typeValue="13800138000" next="50" errnext="103" errlog="0"/>
+ <test id="50" type="testClickByText" typeValue="13800138000" next="52" errnext="-1" errlog="1"/>
+ <test id="103" type="sleep" typeValue="8000" next="051" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打充值电话13800138000 ，判断是否存在Text -->
+ <test id="051" type="testAssertByText" typeValue="充值号码" next="51" errnext="-1" errlog="1"/>
+ <test id="51" type="testClickByText" typeValue="充值号码" next="52" errnext="-1" errlog="1"/>
+ <test id="52" type="sleep" typeValue="2000" next="53" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在Text，没有则跳转到ID055 -->
+ <test id="53" type="testAssertByText" typeValue="确定" next="54" errnext="55" errlog="0"/>
+ <test id="54" type="testClickByText" typeValue="确定" next="056" errnext="-1" errlog="1"/>
+
+ <!-- 跳出拨打提示框，点击“确定”按钮，判断是否存在ResourceId -->
+ <test id="55" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="56" errnext="-1" errlog="1"/>
+ <test id="56" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="056" errnext="-1" errlog="1"/>
+ <test id="056" type="sleep" typeValue="2000" next="57" errnext="-1" errlog="1"/>
+ 
+ <!-- 如果手机没SIM卡，则点击“确定”按钮,判断是否存在Text，没有则跳转到ID059 -->
+ <test id="57" type="testAssertByText" typeValue="确定" next="58" errnext="59" errlog="0"/>
+ <test id="58" type="testClickByText" typeValue="确定" next="59" errnext="-1" errlog="1"/>
+ <test id="59" type="sleep" typeValue="8000" next="60" errnext="-1" errlog="1"/>
+ <!-- 播打10086客服电话截图 -->
+ <test id="60" type="testScreenShot" typeValue="003-服务-常用号码-播打充值电话13800138000电话" next="61" errnext="-1" errlog="1"/>
+ <test id="61" type="testCallOff" typeValue="callout" next="062" errnext="-1" errlog="0"/>
+ <test id="062" type="sleep" typeValue="5000" next="62" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打便民综合信息查询电话12580,判断是否存在Text，没有则跳转到ID064  -->
+ <test id="62" type="testAssertByText" typeValue="12580" next="63" errnext="104" errlog="0"/>
+ <test id="63" type="testClickByText" typeValue="12580" next="65" errnext="-1" errlog="1"/>
+ <test id="104" type="sleep" typeValue="5000" next="064" errnext="-1" errlog="1"/>
+ 
+ <!-- 播打便民综合信息查询电话12580,判断是否存在Text  -->
+ <test id="064" type="testAssertByText" typeValue="确定" next="64" errnext="-1" errlog="1"/>
+ <test id="64" type="testClickByText" typeValue="便民综合信息查询号码" next="65" errnext="-1" errlog="1"/>
+ <test id="65" type="sleep" typeValue="2000" next="66" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮,判断是否存在Text，没有则跳转到ID68 -->
+ <test id="66" type="testAssertByText" typeValue="确定" next="67" errnext="68" errlog="0"/>
+ <test id="67" type="testClickByText" typeValue="确定" next="070" errnext="-1" errlog="1"/>
+ 
+ <!-- 跳出拨打提示框，点击“确定”按钮,判断是否存在ResourceId -->
+ <test id="68" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="69" errnext="-1" errlog="1"/>
+ <test id="69" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/dialog_btn2" next="070" errnext="-1" errlog="1"/>
+ <test id="070" type="sleep" typeValue="2000" next="70" errnext="-1" errlog="1"/>
+ <!-- 如果手机没SIM卡，则点击“确定”按钮 -->
+ <test id="70" type="testAssertByText" typeValue="确定" next="72" errnext="73" errlog="0"/>
+ <test id="72" type="testClickByText" typeValue="确定" next="73" errnext="-1" errlog="1"/>
+ 
+ <test id="73" type="sleep" typeValue="12000" next="74" errnext="-1" errlog="1"/>
+ <!-- 播打10086客服电话截图 -->
+ <test id="74" type="testScreenShot" typeValue="004-服务-常用号码-播打便民综合信息查询电话12580" next="75" errnext="-1" errlog="1"/>
+ <test id="75" type="testCallOff" typeValue="callout" next="076" errnext="-1" errlog="0"/>
+ <test id="076" type="sleep" typeValue="2000" next="76" errnext="-1" errlog="1"/>
+
+ <!-- 返回到上一层 -->
+ <test id="76" type="testAssertByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="77" errnext="-1" errlog="1"/>
+ <test id="77" type="testClickByResourceId" typeValue="com.greenpoint.android.mc10086.activity:id/title_back_btn" next="78" errnext="-1" errlog="1"/>
+ <test id="78" type="sleep" typeValue="1000" next="-1" errnext="-1" errlog="1"/>
+</root>
